@@ -46,6 +46,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.btnMoveToFirst?.setOnClickListener {
+            findNavController().popBackStack(R.id.secondFragment)
             findNavController().navigate(R.id.jetpackFragment)
         }
     }
