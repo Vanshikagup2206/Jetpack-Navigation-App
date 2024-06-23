@@ -9,10 +9,24 @@
         android:id="@+id/jetpackFragment"
         android:name="com.vanshika.jetpacknavigationapp.JetpackFragment"
         android:label="fragment_jetpack"
-        tools:layout="@layout/fragment_jetpack" />
+        tools:layout="@layout/fragment_jetpack" >
+        <action
+            android:id="@+id/action_jetpackFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.vanshika.jetpacknavigationapp.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment"
+            app:popUpTo="@id/jetpackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.vanshika.jetpacknavigationapp.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
 </navigation>
